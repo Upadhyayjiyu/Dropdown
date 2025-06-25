@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dropdown Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background">
+    <header class="navbar">
+      <h1 class="logo">Dropdown UI</h1>
+      <nav>
+        <div class="dropdown">
+          <button onclick="toggleDropdown()" class="dropbtn">Menu ▼</button>
+          <div id="dropdownContent" class="dropdown-content">
+            <a href="#">Gold Price: ₹65,000</a>
+            <a href="#" onclick="showLogin()">Login</a>
+            <a href="#" onclick="showSettings()">Settings</a>
+            <a href="#" onclick="logout()">Logout</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="content">
+      <h2>Welcome to the Dropdown Interface</h2>
+      <p>Use the dropdown to access features like login, logout, and settings.</p>
+    </section>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLogin()">&times;</span>
+      <h3>Login</h3>
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button onclick="submitLogin()">Submit</button>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSettings()">&times;</span>
+      <h3>Settings</h3>
+      <p>Theme: Light / Dark (coming soon)</p>
+      <p>Language: English</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
